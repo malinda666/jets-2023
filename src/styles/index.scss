@@ -8,6 +8,8 @@
 @import './components/header';
 @import './components/section';
 
+@import './views/hero';
+
 body {
-  @apply font-body tracking-tighter leading-none;
+  @apply font-body tracking-tighter leading-none text-[1rem] gradient;
 }
