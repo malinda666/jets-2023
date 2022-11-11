@@ -33,7 +33,7 @@ const Hero: FC = () => {
           </div>
           <div className='hero__title--line'>
             <span className='hero__title--line-inner'>
-              read only <span className='alt'>one page</span>.
+              read only <span className='alt'>one page.</span>
             </span>
           </div>
         </h1>
