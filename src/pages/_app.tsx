@@ -1,3 +1,4 @@
+import "@/styles/index.scss";
 import type { AppProps } from "next/app";
 
 import MainLayout from "@/components/layout/MainLayout";
