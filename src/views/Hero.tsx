@@ -3,6 +3,7 @@ import Image from 'next/image'
 import gsap from 'gsap'
 
 import { DownArrow } from '@/components/shared'
+import { fadeIn, textReveal } from '@/utils/animations'
 
 import Banner from '@/public/images/jp.webp'
 
@@ -12,27 +13,8 @@ const Hero: FC = () => {
 
   useEffect(() => {
     const titleLines = gsap.utils.selector(titleContainer.current)('div > span')
-    gsap.from([titleLines], {
-      duration: 1,
-      y: '110%',
-      opacity: 0,
-      delay: 0.5,
-      stagger: {
-        from: 'start',
-        amount: 0.3,
-      },
-      ease: 'power2.inOut',
-    })
-    gsap.from(scrollerContainer.current, {
-      duration: 1,
-      opacity: 0,
-      delay: 0.65,
-      stagger: {
-        from: 'start',
-        amount: 0.3,
-      },
-      ease: 'power2.inOut',
-    })
+    textReveal(titleLines, 0.5)
+    fadeIn(scrollerContainer.current, 0.675)
   }, [])
 
   return (
