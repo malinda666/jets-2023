@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './utils';
 @import './fonts';
+
+@import './components/header';
+@import './components/section';
 
 body {
   @apply font-body tracking-tighter leading-none;

@@ -1,0 +1,22 @@
+.header {
+  @apply fixed left-0 top-0 w-full flex items-center justify-between py-2 px-8 z-[999] mirror;
+
+  &__item {
+    @apply relative flex items-center justify-center p-2;
+  }
+  .logo {
+    @apply relative flex;
+    &__inner {
+      @apply font-semibold font-title text-lg;
+    }
+  }
+  .nav {
+    @apply relative;
+    &__item {
+      @apply relative p-2 flex items-center justify-center;
+      &--inner {
+        @apply relative px-2 capitalize hover:text-third transition-all;
+      }
+    }
+  }
+}

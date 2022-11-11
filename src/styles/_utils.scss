@@ -1,0 +1,9 @@
+$ease: cubic-bezier(0.19, 1, 0.22, 1);
+
+.mirror {
+  @apply bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border border-gray-100;
+}
+
+.transition-all {
+  transition: all 0.75s $ease;
+}
