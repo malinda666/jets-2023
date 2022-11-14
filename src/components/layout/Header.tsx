@@ -1,9 +1,28 @@
-import { FC } from 'react'
+import { FC, useRef, useEffect, useState, MutableRefObject } from 'react'
 import Link from 'next/link'
 
-import { ExploreCallToAction } from '../shared'
+import { ExploreCallToAction, ExplorePopup } from '../shared'
+
+import useOnClickOutside from '@/hooks/useOutsideClick'
 
 const Header: FC = () => {
+  const exploreButtonRef = useRef() as MutableRefObject<HTMLDivElement>
+  const exploreWrapperRef = useRef() as MutableRefObject<HTMLDivElement>
+
+  const [isExploreOpen, setExploreOpen] = useState<boolean>(false)
+
+  const toggleExploreOpen = () => setExploreOpen(!isExploreOpen)
+
+  useOnClickOutside(exploreWrapperRef, isExploreOpen ? toggleExploreOpen : null)
+
+  useEffect(() => {
+    animateExplore(isExploreOpen ? 'open' : 'close')
+  }, [isExploreOpen])
+
+  const animateExplore = (dir: string) => {
+    console.log(dir)
+  }
+
   return (
     <>
       <header className='header'>
@@ -14,13 +33,18 @@ const Header: FC = () => {
         </div>
         <nav className='header__item nav'>
           <div className='nav__item'>
-            <ExploreCallToAction />
             <Link href='/about'>
               <span className='nav__item--inner'>about</span>
             </Link>
           </div>
+          <ExploreCallToAction
+            isExploreOpen={isExploreOpen}
+            toggleExploreOpen={toggleExploreOpen}
+            exploreButtonRef={exploreButtonRef}
+          />
         </nav>
       </header>
+      <ExplorePopup isOpen={isExploreOpen} exploreWrapperRef={exploreWrapperRef} />
     </>
   )
 }

@@ -13,3 +13,15 @@
     @apply -translate-y-[0%] scale-y-100;
   }
 }
+.explore_button.active {
+  @apply bg-third text-white;
+}
+.explore {
+  @apply fixed inset-0 h-full w-full flex items-center justify-center z-[999];
+  &__wrapper {
+    @apply relative rounded-md shadow-md flex items-center justify-evenly bg-light w-[75vw] h-[75vh];
+    &--inner {
+      @apply relative h-full p-8 flex items-center justify-center;
+    }
+  }
+}
