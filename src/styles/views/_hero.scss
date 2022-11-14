@@ -26,14 +26,14 @@
     }
   }
   &__banner {
-    @apply relative h-full;
+    @apply relative h-full overflow-hidden;
     grid-area: hero-banner;
     > img {
       object-fit: cover;
     }
   }
   &__scroller {
-    @apply relative flex items-end justify-center;
+    @apply relative flex items-end justify-center text-third;
     grid-area: hero-scroller;
 
     > svg {

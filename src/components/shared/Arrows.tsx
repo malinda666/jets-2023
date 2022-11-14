@@ -36,7 +36,7 @@ const DownArrow = () => {
       y='0px'
       viewBox='0 0 63.55 63.55'
       xmlSpace='preserve'
-      className='rotate-[90deg]'
+      className='rotate-[90deg] text-current'
     >
       <g>
         <path

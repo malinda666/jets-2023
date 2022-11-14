@@ -1,0 +1,15 @@
+.explore_button {
+  @apply relative py-2 px-4 rounded-full border border-third mr-2 cursor-pointer hover:bg-third  hover:text-white transition-all overflow-hidden flex items-center;
+  > span {
+    @apply relative block transform transition-transform;
+    &:nth-child(2) {
+      @apply absolute translate-y-[200%] scale-y-125;
+    }
+  }
+  &:hover > span:first-child {
+    @apply -translate-y-[200%] scale-y-125;
+  }
+  &:hover > span:nth-child(2) {
+    @apply -translate-y-[0%] scale-y-100;
+  }
+}

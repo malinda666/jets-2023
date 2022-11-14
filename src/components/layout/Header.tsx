@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import Link from 'next/link'
 
+import { ExploreCallToAction } from '../shared'
+
 const Header: FC = () => {
   return (
     <>
@@ -12,9 +14,7 @@ const Header: FC = () => {
         </div>
         <nav className='header__item nav'>
           <div className='nav__item'>
-            <Link href='/explore'>
-              <span className='nav__item--inner'>explore</span>
-            </Link>
+            <ExploreCallToAction />
             <Link href='/about'>
               <span className='nav__item--inner'>about</span>
             </Link>
