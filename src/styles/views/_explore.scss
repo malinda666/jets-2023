@@ -17,11 +17,23 @@
   @apply bg-third text-white;
 }
 .explore {
-  @apply fixed inset-0 h-full w-full flex items-center justify-center z-[999];
+  @apply fixed inset-0 h-full w-full flex items-center justify-center z-[999] mirror;
   &__wrapper {
-    @apply relative rounded-md shadow-md flex items-center justify-evenly bg-light w-[75vw] h-[75vh];
+    @apply relative rounded-md shadow-md flex items-center justify-evenly bg-light w-2/3 h-2/3;
     &--inner {
       @apply relative h-full p-8 flex items-center justify-center;
+    }
+  }
+  &__title {
+    @apply text-xl flex flex-col items-start justify-center;
+    > span {
+      // @apply opacity-0;
+    }
+    &--inner {
+      @apply overflow-hidden;
+      > span {
+        @apply text-5xl uppercase font-bold inline-block;
+      }
     }
   }
 }

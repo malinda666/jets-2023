@@ -1,7 +1,7 @@
 $ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 .mirror {
-  @apply bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-100;
+  @apply bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-b border-gray-100;
 }
 
 .transition-all {
@@ -28,5 +28,5 @@ $ease: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .divider__vertical {
-  @apply relative w-[1px] h-full min-h-[70px] bg-gray-300;
+  @apply relative w-[1px] h-[50%] min-h-[70px] bg-gray-300;
 }
