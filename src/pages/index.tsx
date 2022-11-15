@@ -1,5 +1,4 @@
 import { NextPage } from 'next'
-import Image from 'next/image'
 
 import { Section } from '@/components/shared'
 import { Hero, About, Services, Contact } from '@/views'
