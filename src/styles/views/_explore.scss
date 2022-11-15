@@ -17,7 +17,7 @@
   @apply bg-third text-white;
 }
 .explore {
-  @apply fixed inset-0 h-full w-full flex items-center justify-center z-[999] mirror;
+  @apply fixed inset-0 h-full w-full flex items-center justify-center z-[999];
   &__wrapper {
     @apply relative rounded-md shadow-md flex items-center justify-evenly bg-light w-2/3 h-2/3;
     &--inner {

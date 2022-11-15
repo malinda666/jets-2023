@@ -2,7 +2,7 @@ import gsap from 'gsap'
 
 export const fadeIn = (element: any, delay?: number) => {
   gsap.from([element], {
-    duration: 1,
+    duration: 1.25,
     opacity: 0,
     delay: delay || 0,
     stagger: {
@@ -32,8 +32,8 @@ export const imageReveal = (element: any, delay?: number) => {
     duration: 1.75,
     opacity: 0,
     delay: delay || 0,
-    scale: 2,
+    scale: 1.3,
     transformOrigin: 'center',
-    ease: 'power3.inOut',
+    ease: 'power4.inOut',
   })
 }

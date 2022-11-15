@@ -24,7 +24,7 @@ $ease: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .alt {
-  @apply italic font-bold;
+  @apply italic font-bold text-dark;
 }
 
 .divider__vertical {

@@ -23,6 +23,10 @@
       &-inner {
         @apply inline-block;
       }
+
+      &:nth-child(2) {
+        @apply pl-16;
+      }
     }
   }
   &__banner {

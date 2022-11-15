@@ -29,7 +29,7 @@ const Hero: FC = () => {
         <h1 ref={titleContainer}>
           <div className='hero__title--line'>
             <span className='hero__title--line-inner'>
-              The <span className='alt'>world</span> is a book
+              The <span className='alt'>world</span> is a book.
             </span>
           </div>
           <div className='hero__title--line'>

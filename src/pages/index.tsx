@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 
 import { Section } from '@/components/shared'
-import { Hero } from '@/views'
+import { Hero, About, Services, Contact } from '@/views'
 
 const Home: NextPage = () => {
   return (
@@ -10,8 +10,14 @@ const Home: NextPage = () => {
       <Section>
         <Hero />
       </Section>
+      <Section cls='sm'>
+        <About />
+      </Section>
+      <Section cls='lg'>
+        <Services />
+      </Section>
       <Section>
-        <div className=''>home 2</div>
+        <Contact />
       </Section>
     </>
   )
