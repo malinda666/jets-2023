@@ -1,0 +1,20 @@
+.services__inner {
+  @apply grid gap-4 place-self-stretch grid-cols-2 row-auto;
+
+  &--item {
+    @apply relative flex flex-col items-start justify-center p-16 max-w-2xl;
+  }
+  &--title,
+  &--id {
+    @apply text-dark;
+  }
+  &--title {
+    @apply text-2xl capitalize leading-tight;
+  }
+  &--body {
+    @apply text-base py-2 text-black;
+  }
+  &--id {
+    @apply text-9xl;
+  }
+}

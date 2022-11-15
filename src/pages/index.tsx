@@ -10,15 +10,15 @@ const Home: NextPage = () => {
       <Section>
         <Hero />
       </Section>
-      <Section cls='sm'>
+      <Section>
         <About />
       </Section>
-      <Section cls='lg'>
+      <Section>
         <Services />
       </Section>
-      <Section>
+      {/* <Section>
         <Contact />
-      </Section>
+      </Section> */}
     </>
   )
 }

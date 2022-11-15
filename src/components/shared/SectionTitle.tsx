@@ -6,7 +6,7 @@ interface SectionTitleProps {
 
 const SectionTitle: FC<SectionTitleProps> = ({ text }) => {
   return (
-    <div className='relative py-2 border-b mb-4'>
+    <div className='relative py-2 border-b mb-12'>
       <span className='uppercase tracking-widest font-bold text-sm text-accent'>
         {text || '--'}
       </span>

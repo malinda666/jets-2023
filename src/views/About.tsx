@@ -1,19 +1,25 @@
 import { FC } from 'react'
 
-import { Section, SectionTitle } from '@/components/shared'
+import { SectionTitle } from '@/components/shared'
+import Image from 'next/image'
+
+import AboutImg from '@/public/images/sl2.webp'
 
 const About: FC = () => {
   return (
-    <div className='relative w-full flex flex-col items-center justify-center'>
+    <div className='wrapper'>
       <SectionTitle text='about us' />
-      <p className='relative max-w-5xl text-[3.5rem] font-title'>
-        We <span className='alt'>research, design and develop</span> products for major names in the
-        world of <span className='alt'> luxury, design and architecture, </span> with the aim of
-        creating objects that are
-        <span className='alt'> unique </span>
-        in the world in terms of
-        <span className='alt'> inspiration, creativity and workmanship.</span>
-      </p>
+      <div className='about__inner'>
+        <p className='about__inner--para'>
+          We <span className='alt'>research, design and develop</span> products for major names in
+          the world of <span className='alt'> luxury, design and architecture, </span> with the aim
+          of creating objects that are
+          <span className='alt'> unique </span>
+          in the world in terms of
+          <span className='alt'> inspiration, creativity and workmanship.</span>
+        </p>
+        <Image src={AboutImg} alt='About' className='about__inner--img' />
+      </div>
     </div>
   )
 }

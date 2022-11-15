@@ -1,0 +1,9 @@
+.about__inner {
+  @apply relative w-full h-auto flex flex-col items-center justify-start;
+  &--para {
+    @apply relative text-[2.5rem] font-title mb-8 px-16 text-center max-w-6xl;
+  }
+  &--img {
+    @apply relative;
+  }
+}
