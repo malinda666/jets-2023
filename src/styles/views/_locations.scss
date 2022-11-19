@@ -1,0 +1,15 @@
+.locations {
+  @apply relative w-full h-max;
+  &__inner {
+    @apply relative w-full flex items-center justify-center;
+    &--title {
+      @apply relative flex items-center justify-center overflow-hidden pr-2;
+      > span {
+        @apply inline-block text-[2em];
+      }
+    }
+    &:nth-child(2) {
+      @apply pl-36;
+    }
+  }
+}

@@ -1,29 +1,18 @@
 import { NextPage } from 'next'
 
 import { Section } from '@/components/shared'
-
+import { Explore } from '@/views'
 import { supabase } from '@/utils/APIClient'
 
 interface ExplorePageProps {
   locations: any
 }
 
-const Explore: NextPage<ExplorePageProps> = ({ locations }) => {
+const ExplorePage: NextPage<ExplorePageProps> = ({ locations }) => {
   return (
     <>
       <Section>
-        <div className='wrapper'>
-          {locations
-            ? locations.map((location: any) => (
-                <div className='' key={location.id}>
-                  {location.name}
-                </div>
-              ))
-            : null}
-        </div>
-      </Section>
-      <Section>
-        <div className=''>explore 2</div>
+        <Explore locations={locations} />
       </Section>
     </>
   )
@@ -39,4 +28,4 @@ export const getStaticProps = async () => {
   }
 }
 
-export default Explore
+export default ExplorePage

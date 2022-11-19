@@ -15,9 +15,7 @@
   &__title {
     @apply relative flex items-center justify-start;
     grid-area: hero-title;
-    > h1 {
-      @apply text-[5vw] font-title font-bold tracking-tighter leading-none w-full uppercase;
-    }
+
     &--line {
       @apply relative flex items-center overflow-hidden pr-2;
       &-inner {

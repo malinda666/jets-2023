@@ -34,3 +34,6 @@ $ease: cubic-bezier(0.19, 1, 0.22, 1);
 img {
   @apply rounded-md object-cover object-center;
 }
+h1 {
+  @apply text-[5vw] font-title font-bold tracking-tighter leading-none w-full uppercase;
+}
