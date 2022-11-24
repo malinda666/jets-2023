@@ -6,3 +6,4 @@ export { default as Contact } from './Contact'
 
 // explore
 export { default as Explore } from './Explore/Explore'
+export { default as Location } from './Explore/Location'

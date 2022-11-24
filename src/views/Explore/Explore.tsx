@@ -1,5 +1,6 @@
 import { FC, useRef, useEffect, MutableRefObject } from 'react'
 import gsap from 'gsap'
+import Link from 'next/link'
 
 import { fadeIn, textReveal, imageReveal } from '@/utils/animations'
 
@@ -23,9 +24,11 @@ const Explore: FC<ExploreProps> = ({ locations }) => {
           ? locations.map((location: any) => (
               <div className='locations__inner' key={location.id}>
                 <h1>
-                  <div className='locations__inner--title'>
-                    <span>{location.name}</span>
-                  </div>
+                  <Link href={`/explore/${location.slug}`}>
+                    <div className='locations__inner--title'>
+                      <span>{location.name}</span>
+                    </div>
+                  </Link>
                 </h1>
               </div>
             ))

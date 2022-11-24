@@ -15,7 +15,7 @@ export const fadeIn = (element: any, delay?: number) => {
 
 export const textReveal = (element: any, delay?: number) => {
   gsap.from([element], {
-    duration: 1,
+    duration: 1.2,
     y: '110%',
     opacity: 0,
     delay: delay || 0,
@@ -23,7 +23,7 @@ export const textReveal = (element: any, delay?: number) => {
       from: 'start',
       amount: 0.3,
     },
-    ease: 'power2.inOut',
+    ease: 'power3.out',
   })
 }
 

@@ -13,3 +13,48 @@
     }
   }
 }
+
+.location {
+  @apply relative w-full;
+  &__inner {
+    @apply relative w-full flex items-center justify-center;
+    &--title {
+      @apply relative w-full flex items-center justify-between overflow-hidden pr-2;
+      > span {
+        @apply inline-block text-[2em];
+        &:nth-child(2) {
+          @apply relative flex-1 h-px bg-light;
+        }
+      }
+    }
+  }
+}
+
+.posts {
+  @apply relative w-full h-full grid grid-cols-3 gap-2;
+  .post {
+    &:first-child {
+      @apply col-span-2;
+    }
+    @apply relative min-h-[25rem] w-full p-4 border rounded border-slate-300 flex flex-col items-start justify-between;
+    &__inner--title {
+      @apply text-[2vw] tracking-tight font-body;
+      > span {
+      }
+    }
+    &__inner--footer {
+      @apply relative w-full flex items-center justify-between;
+    }
+    &__inner--excerpt {
+      @apply relative w-2/3;
+      > p {
+      }
+    }
+    &__inner--cta {
+      @apply flex-1 flex items-center justify-end;
+      > span {
+        @apply capitalize underline;
+      }
+    }
+  }
+}
