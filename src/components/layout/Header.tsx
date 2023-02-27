@@ -95,6 +95,7 @@ const Header: FC = () => {
               <span className='nav__item--inner'>explore</span>
             </Link>
           </div>
+
           <div className='nav__item'>
             <Link href='/about'>
               <span className='nav__item--inner'>about</span>

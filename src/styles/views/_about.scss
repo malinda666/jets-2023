@@ -1,9 +1,12 @@
 .about__inner {
-  @apply relative w-full h-auto flex flex-col items-center justify-start;
+  @apply relative w-full h-full grid grid-cols-2;
   &--para {
-    @apply relative text-[2.5rem] font-title mb-8 px-16 text-center max-w-6xl;
+    @apply relative flex flex-col items-start justify-evenly px-16 py-16 max-w-3xl;
+    > p {
+      @apply relative text-[2.5rem] font-title text-start;
+    }
   }
   &--img {
-    @apply relative;
+    @apply relative self-end w-full h-[calc(100vh*0.75)];
   }
 }

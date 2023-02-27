@@ -1,16 +1,16 @@
 .hero {
-  @apply absolute py-16 px-8 w-full h-full;
+  @apply absolute pt-16 pb-4 px-8 w-full h-full;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    'hero-title hero-title hero-title hero-title .'
-    'hero-title hero-title hero-title hero-title .'
-    '. hero-banner hero-banner hero-banner hero-banner'
-    'hero-scroller hero-banner hero-banner hero-banner hero-banner'
-    'hero-scroller hero-banner hero-banner hero-banner hero-banner';
+    'hero-title hero-title hero-title hero-title hero-scroller'
+    'hero-title hero-title hero-title hero-title hero-scroller'
+    'hero-banner hero-banner hero-banner hero-banner hero-banner'
+    'hero-banner hero-banner hero-banner hero-banner hero-banner'
+    'hero-banner hero-banner hero-banner hero-banner hero-banner';
 
   &__title {
     @apply relative flex items-center justify-start;
@@ -35,11 +35,11 @@
     }
   }
   &__scroller {
-    @apply relative flex items-end justify-center text-third;
+    @apply relative flex items-center justify-center text-third;
     grid-area: hero-scroller;
 
     > svg {
-      @apply relative h-auto w-3/4 px-8;
+      @apply relative h-auto w-3/4 px-16;
     }
   }
 }

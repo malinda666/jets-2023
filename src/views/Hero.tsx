@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { DownArrow } from '@/components/shared'
 import { fadeIn, textReveal, imageReveal } from '@/utils/animations'
 
-import Banner from '@/public/images/jp.webp'
+import Banner from '@/public/images/sl2.webp'
 
 const Hero: FC = () => {
   const titleContainer = useRef() as MutableRefObject<HTMLHeadingElement>
