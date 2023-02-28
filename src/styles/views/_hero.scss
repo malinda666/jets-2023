@@ -1,30 +1,30 @@
 .hero {
-  @apply absolute pt-16 pb-4 px-8 w-full h-full;
+  @apply absolute pt-20 pb-4 px-8 w-full h-full;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    'hero-title hero-title hero-title hero-title hero-scroller'
-    'hero-title hero-title hero-title hero-title hero-scroller'
     'hero-banner hero-banner hero-banner hero-banner hero-banner'
     'hero-banner hero-banner hero-banner hero-banner hero-banner'
-    'hero-banner hero-banner hero-banner hero-banner hero-banner';
+    'hero-banner hero-banner hero-banner hero-banner hero-banner'
+    'hero-title hero-title hero-title hero-title hero-title'
+    'hero-title hero-title hero-title hero-title hero-title';
 
   &__title {
-    @apply relative flex items-center justify-start;
+    @apply relative flex items-center justify-center;
     grid-area: hero-title;
 
     &--line {
-      @apply relative flex items-center overflow-hidden pr-2;
+      @apply relative flex items-center justify-center overflow-hidden pr-2 whitespace-nowrap;
       &-inner {
         @apply inline-block;
       }
 
-      &:nth-child(2) {
-        @apply pl-16;
-      }
+      // &:nth-child(2) {
+      //   @apply pl-14;
+      // }
     }
   }
   &__banner {
@@ -32,10 +32,12 @@
     grid-area: hero-banner;
     > img {
       object-fit: cover;
+      @apply rounded-md;
     }
   }
   &__scroller {
-    @apply relative flex items-center justify-center text-third;
+    display: none !important;
+    @apply absolute bottom-0 left-0 w-1/6 m-4 opacity-30 flex items-center justify-center text-third;
     grid-area: hero-scroller;
 
     > svg {

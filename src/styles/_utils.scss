@@ -24,15 +24,18 @@ $ease: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .alt {
-  @apply font-bold text-dark;
+  @apply font-bold text-third;
 }
 
 .divider__vertical {
   @apply relative w-[1px] h-[50%] min-h-[70px] bg-gray-300;
 }
 
-img {
-  @apply rounded-xl object-cover object-center;
+.image {
+  @apply rounded-xl overflow-hidden;
+  img {
+    @apply object-cover object-top scale-150;
+  }
 }
 h1 {
   @apply text-[5vw] font-title font-bold tracking-tighter leading-none w-full uppercase;
