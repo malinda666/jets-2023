@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { SectionTitle } from '@/components/shared'
+import { SectionTitle, Button } from '@/components/shared'
 import Image from 'next/image'
 
 import AboutImg from '@/public/images/jp.webp'
@@ -20,7 +20,7 @@ const About: FC = () => {
             in the world in terms of
             <span className='alt'> inspiration, creativity and workmanship.</span>
           </p>
-          <div className='button'>read more</div>
+          <Button text='read more' />
         </div>
       </div>
     </div>

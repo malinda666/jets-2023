@@ -37,7 +37,3 @@ img {
 h1 {
   @apply text-[5vw] font-title font-bold tracking-tighter leading-none w-full uppercase;
 }
-
-.button {
-  @apply px-2 py-1 text-sm border border-dark w-max rounded-full capitalize;
-}
