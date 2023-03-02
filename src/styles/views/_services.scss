@@ -1,20 +1,51 @@
-.services__inner {
-  @apply grid gap-4 place-self-stretch grid-cols-2 row-auto;
+:root {
+  --slide-height: 100vh;
+  --slide--helf-height: var(--slide-height) / 2;
+}
 
+.services__wrapper {
+  height: calc(var(--slide-height) * var(--slides));
+
+  @apply sticky w-full left-0 grid grid-cols-3 gap-4 place-items-start top-0;
+
+  // > div {
+  //   @apply m-2;
+  // }
+}
+.services__inner {
+  @apply relative w-full h-auto;
   &--item {
-    @apply relative flex flex-col items-start justify-center p-16 max-w-2xl;
+    @apply relative flex w-full h-[var(--slide-height)];
   }
-  &--title,
-  &--id {
-    @apply text-dark;
-  }
-  &--title {
-    @apply text-2xl capitalize leading-tight;
+}
+.services__left {
+  @apply col-span-1;
+  &--item {
+    @apply absolute py-16 px-4 flex-col items-start justify-center opacity-0;
+    height: 100vh;
+
+    &.active {
+      @apply opacity-100;
+    }
   }
   &--body {
-    @apply text-base py-2 text-black;
   }
-  &--id {
-    @apply text-9xl;
+  &--title {
+    @apply text-4xl font-title capitalize font-semibold;
+    > .id {
+      @apply relative inline-block h-max;
+    }
+  }
+}
+.services__right {
+  @apply col-span-2;
+  &--item {
+    @apply p-0 items-center justify-between;
+  }
+  &--img {
+    @apply absolute h-full w-full overflow-hidden;
+    > img {
+      @apply absolute h-full w-full object-cover object-center scale-150;
+    }
   }
 }

@@ -15,9 +15,9 @@ const Home: NextPage = () => {
       <Section>
         <Services />
       </Section>
-      {/* <Section>
+      <Section>
         <Contact />
-      </Section> */}
+      </Section>
     </>
   )
 }
