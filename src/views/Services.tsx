@@ -18,20 +18,21 @@ const Services: FC = () => {
   const tl = useRef() as any
 
   useEffect(() => {
+    const totalSlides = services.length
     const rightSection = document.querySelector('.services__right')
     const leftSection = document.querySelector('.services__left')
 
     if (!rightSection?.getBoundingClientRect()) return
     if (!leftSection?.getBoundingClientRect()) return
 
-    const rightHeight = rightSection.getBoundingClientRect().height
-    const leftHeight = leftSection.getBoundingClientRect().height
+    const heightFactor = 0
+    const rightHeight = rightSection.getBoundingClientRect().height + heightFactor
+    const leftHeight = leftSection.getBoundingClientRect().height + heightFactor
     const heightDiff = rightHeight - leftHeight
 
     const start = `top top`
     const end = `bottom+=${heightDiff} bottom+=${leftHeight}`
 
-    const totalSlides = services.length
     tl.current = gsap.timeline({
       scrollTrigger: {
         trigger: leftSection,
@@ -44,7 +45,6 @@ const Services: FC = () => {
         onUpdate: (self) => {
           const velo = self.progress
           const pos = Math.floor(mapRange(0, 1, velo, 1.5, 5.5))
-          console.log(pos)
           setActiveSlide(pos)
         },
       },
@@ -74,11 +74,13 @@ const Services: FC = () => {
               key={service.id}
             >
               <div className='services__left--title'>
-                <span className='id'>{service.id}</span>
+                <span className='id alt'>
+                  <sup>{service.id}</sup>
+                </span>
                 <span className=''>{service.title}</span>
               </div>
 
-              <div className='services__right--body'>
+              <div className='services__left--body'>
                 <span className=''>{service.body}</span>
               </div>
             </div>

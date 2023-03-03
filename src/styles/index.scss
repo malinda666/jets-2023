@@ -16,5 +16,6 @@
 @import './views/locations';
 
 body {
-  @apply font-body tracking-tighter leading-none text-[1rem] gradient;
+  @apply font-body tracking-tighter leading-none text-[1rem] gradient antialiased;
+  text-rendering: optimizeLegibility;
 }

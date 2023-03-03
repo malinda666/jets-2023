@@ -17,8 +17,9 @@ module.exports = {
         accent: '#1bb0ce',
       },
       fontFamily: {
-        title: ['Hanken Grotesk Regular', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        title: ['AG', 'sans-serif'],
+        title2: ['Bellina', 'serif'],
+        body: ['Helvetica', 'sans-serif'],
       },
     },
   },

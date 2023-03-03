@@ -21,19 +21,37 @@
 .services__left {
   @apply col-span-1;
   &--item {
-    @apply absolute py-16 px-4 flex-col items-start justify-center opacity-0;
+    @apply absolute py-16 px-4 flex-col items-start justify-center;
     height: 100vh;
-
-    &.active {
-      @apply opacity-100;
-    }
   }
+
   &--body {
+    @apply absolute bottom-0 py-16 pl-3.5 text-start max-w-sm block translate-y-10 opacity-0  will-change-transform transition-all duration-700 delay-100;
   }
   &--title {
-    @apply text-4xl font-title capitalize font-semibold;
+    @apply relative w-full text-4xl font-title capitalize overflow-hidden;
+    > span {
+      @apply relative inline-block mr-2 will-change-transform transition-transform duration-300;
+    }
     > .id {
-      @apply relative inline-block h-max;
+      @apply absolute top-0 text-lg px-1 -translate-x-full;
+    }
+    > span:nth-child(2) {
+      @apply pl-4 translate-y-full;
+    }
+  }
+
+  &--item.active {
+    .services__left--title {
+      > .id {
+        @apply mr-2 translate-x-0;
+      }
+      > span:nth-child(2) {
+        @apply translate-y-0;
+      }
+    }
+    .services__left--body {
+      @apply translate-y-0 opacity-100;
     }
   }
 }
@@ -43,7 +61,7 @@
     @apply p-0 items-center justify-between;
   }
   &--img {
-    @apply absolute h-full w-full overflow-hidden;
+    @apply relative h-full w-full overflow-hidden;
     > img {
       @apply absolute h-full w-full object-cover object-center scale-150;
     }

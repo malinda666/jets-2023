@@ -1,5 +1,5 @@
 .header {
-  @apply fixed left-0 top-0 w-full flex items-center justify-between py-2 px-8 z-[999] mirror;
+  @apply fixed left-0 top-0 w-full flex items-center justify-between py-2 px-8 z-[999] mix-blend-multiply text-black bg-white;
 
   &__item {
     @apply relative flex items-center justify-end p-2;
@@ -7,15 +7,15 @@
   .logo {
     @apply relative flex;
     &__inner {
-      @apply font-semibold font-title text-lg;
+      @apply font-title font-semibold text-xl;
     }
   }
   .nav {
     @apply relative flex-1;
     &__item {
-      @apply relative p-2 flex items-center justify-center;
+      @apply relative p-2 flex items-center justify-center font-body text-sm;
       &--inner {
-        @apply relative px-2 capitalize hover:text-third transition-all;
+        @apply relative px-2 capitalize hover:text-third transition-all font-thin;
       }
     }
   }
