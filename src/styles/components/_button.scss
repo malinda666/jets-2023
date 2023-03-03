@@ -1,5 +1,5 @@
 .button {
-  @apply relative inline-block overflow-hidden cursor-pointer pointer-events-auto bg-light bg-none px-3 py-1 m-0 rounded-md text-white text-sm font-thin capitalize;
+  @apply relative inline-block overflow-hidden cursor-pointer pointer-events-auto bg-light bg-none px-4 py-2 m-0 rounded-md text-white text-sm font-thin capitalize;
 
   span {
     @apply block relative mix-blend-difference z-10;

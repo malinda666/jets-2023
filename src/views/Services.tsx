@@ -2,7 +2,7 @@ import { FC, MutableRefObject, useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
-import { SectionTitle } from '@/components/shared'
+import { SectionTitle, ParallaxImageAlt } from '@/components/shared'
 import { useScroll } from '@/ctx/ScrollContext'
 
 import { services } from '@/data/services'
@@ -25,6 +25,8 @@ const Services: FC = () => {
     if (!rightSection?.getBoundingClientRect()) return
     if (!leftSection?.getBoundingClientRect()) return
 
+    const slides = rightSection?.querySelectorAll('.services__right--item img')
+    console.log(slides)
     const heightFactor = 0
     const rightHeight = rightSection.getBoundingClientRect().height + heightFactor
     const leftHeight = leftSection.getBoundingClientRect().height + heightFactor
@@ -49,6 +51,16 @@ const Services: FC = () => {
         },
       },
     })
+
+    // tl.current.to(slides, {
+    //   duration: 1.2,
+    //   ease: 'expo.out',
+
+    //   y: -100,
+    // })
+    // tl.current.to(slides, {
+    //   y: -100,
+    // })
 
     return () => {
       tl.current.kill()
@@ -90,7 +102,7 @@ const Services: FC = () => {
           {services.map((service) => (
             <div className='services__right--item services__inner--item' key={service.id}>
               <div className='services__right--img'>
-                <img src={service.image} alt={service.title} />
+                <ParallaxImageAlt src={service.image} alt={service.title} />
               </div>
             </div>
           ))}

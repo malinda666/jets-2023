@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { SectionTitle, Button, Image } from '@/components/shared'
+import { SectionTitle, Button, ParallaxImage } from '@/components/shared'
 
 import AboutImg from '@/public/images/jp.webp'
 
@@ -9,7 +9,7 @@ const About: FC = () => {
     <div className='wrapper'>
       <SectionTitle text='about us' />
       <div className='about__inner'>
-        <Image src={AboutImg} alt='About' cls='about__inner--img' />
+        <ParallaxImage src={AboutImg} alt='About' cls='about__inner--img' />
         <div className='about__inner--para'>
           <p>
             We <span className='alt'>research, design and develop</span> products for major names in

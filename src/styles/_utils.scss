@@ -41,6 +41,12 @@ $ease: cubic-bezier(0.19, 1, 0.22, 1);
     @apply object-cover object-top scale-150;
   }
 }
+.image-alt {
+  @apply relative h-full w-full overflow-hidden rounded-xl my-2;
+  > img {
+    @apply absolute h-full w-full object-cover object-center scale-150;
+  }
+}
 h1 {
   @apply text-[5vw] font-title font-bold tracking-tighter leading-none w-full uppercase;
 }

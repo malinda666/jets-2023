@@ -8,6 +8,11 @@ type CustomImageProps = {
   alt: string
   cls?: string
 }
+type ParallaxImageAltProps = {
+  src: string
+  alt: string
+  cls?: string
+}
 
 const ParallaxImage: FC<CustomImageProps> = ({ src, alt, cls }) => {
   gsap.registerPlugin(ScrollTrigger)
@@ -39,5 +44,37 @@ const ParallaxImage: FC<CustomImageProps> = ({ src, alt, cls }) => {
     </div>
   )
 }
+const ParallaxImageAlt: FC<ParallaxImageAltProps> = ({ src, alt, cls }) => {
+  gsap.registerPlugin(ScrollTrigger)
 
-export default ParallaxImage
+  // useEffect(() => {
+  //   const imgWrapper = document.querySelectorAll('.image-alt')
+
+  //   imgWrapper.forEach((el, i) => {
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: imgWrapper,
+  //         start: 'top top+=70%',
+  //         end: 'bottom bottom-=70%',
+  //         scrub: 1,
+  //       },
+  //     })
+  //     const image = gsap.utils.selector(el)('img')
+  //     tl.to(image, {
+  //       y: -100,
+  //     })
+  //   })
+
+  //   return () => {
+  //     tl.kill()
+  //   }
+  // }, [])
+
+  return (
+    <div className='image-alt'>
+      <img src={src} alt={alt} className={cls} />
+    </div>
+  )
+}
+
+export { ParallaxImage, ParallaxImageAlt }

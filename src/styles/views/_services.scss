@@ -6,7 +6,7 @@
 .services__wrapper {
   height: calc(var(--slide-height) * var(--slides));
 
-  @apply sticky w-full left-0 grid grid-cols-3 gap-4 place-items-start top-0;
+  @apply sticky w-full left-0 grid grid-cols-2 gap-4 place-items-start top-0;
 
   // > div {
   //   @apply m-2;
@@ -21,15 +21,15 @@
 .services__left {
   @apply col-span-1;
   &--item {
-    @apply absolute py-16 px-4 flex-col items-start justify-center;
+    @apply absolute py-16 px-4 w-full flex-col items-start justify-center;
     height: 100vh;
   }
 
   &--body {
-    @apply absolute bottom-0 py-16 pl-3.5 text-start max-w-sm block translate-y-10 opacity-0  will-change-transform transition-all duration-700 delay-100;
+    @apply absolute capitalize bottom-0 pb-40 pl-3.5 text-start block translate-y-10 opacity-0 max-w-lg will-change-transform transition-all duration-700 delay-100;
   }
   &--title {
-    @apply relative w-full text-4xl font-title capitalize overflow-hidden;
+    @apply relative w-full text-[4rem] font-title font-semibold capitalize overflow-hidden;
     > span {
       @apply relative inline-block mr-2 will-change-transform transition-transform duration-300;
     }
@@ -56,12 +56,13 @@
   }
 }
 .services__right {
-  @apply col-span-2;
+  @apply col-span-1;
   &--item {
-    @apply p-0 items-center justify-between;
+    @apply p-0 items-center justify-end;
   }
   &--img {
-    @apply relative h-full w-full overflow-hidden;
+    @apply relative w-full rounded-xl overflow-hidden;
+    aspect-ratio: 1/1;
     > img {
       @apply absolute h-full w-full object-cover object-center scale-150;
     }

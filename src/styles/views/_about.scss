@@ -1,5 +1,5 @@
 .about__inner {
-  @apply relative w-full h-full grid grid-cols-2;
+  @apply relative w-full h-full grid grid-cols-2 px-4;
   &--para {
     @apply relative flex flex-col items-start justify-evenly px-16 py-16 max-w-3xl;
     > p {
